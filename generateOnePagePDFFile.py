@@ -1,12 +1,12 @@
 # Install necessary libraries for
 #!apt-get install -y libcairo2 libpango-1.0-0 libgdk-pixbuf2.0-0 libffi-dev
-pip install git+https://github.com/Kozea/cairocffi.git
-pip install reportlab jinja2 weasyprint
-pip install -U kaleido
-pip install -q reportlab pillow pandas
-pip uninstall ploty
-pip install plotly==5.3.1
-pip install streamlit
+# pip install git+https://github.com/Kozea/cairocffi.git
+# pip install reportlab jinja2 weasyprint
+# pip install -U kaleido
+# pip install -q reportlab pillow pandas
+# pip uninstall ploty
+# pip install plotly==5.3.1
+# pip install streamlit
 
 import streamlit as st
 import pandas as pd
