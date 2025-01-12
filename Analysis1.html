@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Report 2024</title>
+    <style>
+        @page {
+          margin: 0; 
+          padding: 0;
+        }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            max-width: 1200px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 5px #ccc;
+        }
+        .highlight {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 0;
+        }
+        .section {
+            margin: 0;
+            padding: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #f4f4f4;
+        } 
+        .header {
+            color: #fff;
+            text-align: center;
+            font-size: 28px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #002366;
+            margin: 0;
+            padding: 0;
+            height: 50px;
+        }
+        .header-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            padding: 0;
+        }
+        .header-logo img {
+            height: 50px;
+            width: 150px;
+        }
+        .kpi-table {
+            margin: 0px;
+            border-collapse: collapse;
+            width: 50%;
+            table-layout: fixed;
+        }
+        .kpi-table-th, .kpi-table-td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+            height: 10px; 
+        }
+        .kpi-table-th {
+            background-color: #002366;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        .chart-table {
+            margin: 0px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        tr, td, th {
+             width: 50%;
+             height: 20%;
+        }
+        .image-container {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+        }
+        .image-container img {
+            width: 100%;
+            height: 200px;
+        }
+        .data-table {
+            width: 40%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        .data-table-th, .data-table-td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 5px;
+            line-height:0.5;
+        }
+        .data-table-tr {
+            height: 5px;
+        }
+        .data-table-th {
+            background-color: #002366;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        footer {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .page-number {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="header-name"> <h1>{{title_name}}</h1>.</div>
+                <div class="header-logo">
+                  <img src="file://{{logo_path}}" alt="Logo">
+                </div>
+        </div>  
+            <!-- Summary Section -->
+            <section class="highlight">
+                <h2>{{summary_title_name}}</h2>
+                <p> {{summary_text}}</p>
+            </section>
+                <!-- KPI Section -->
+                <section>
+                    <h2>{{kpi_title_name}}</h2>
+                        <table class="kpi-table">
+                          <thead>
+                              <tr>
+                                  <th class="kpi-table-th">x1</th>
+                                  <th class="kpi-table-th">y1</th>
+                                  <th class="kpi-table-th">z1</th>
+                                  <th class="kpi-table-th">x2</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td class="kpi-table-td">0.03</td>
+                                  <td class="kpi-table-td">0.89</td>
+                                  <td class="kpi-table-td">0.62</td>
+                                  <td class="kpi-table-td">0.95</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                </section> 
+                    <!-- Performance Analysis -->
+                    <section>
+                      <h2>{{chart_title_name}}</h2> 
+                        <table class="chart-table" >
+                          <tr>
+                              <td>
+                                <div class="image-container">
+                                  <img src="file://{{chart_path}}" alt="chart image">
+                                </div>
+                              </td>
+                              <td>
+                                <section class="highlight">
+                                    <p> {{chart_writeup}}</p>
+                                </section>
+                              </td>
+                          </tr>
+                        </table>
+                    </section>
+                        <!-- Performance Data Table -->
+                        <h2>{{datatable_tile_name}}</h2>
+                          <table class="data-table">
+                            <thead>
+                                <tr class="data-table-tr">
+                                    <th class="data-table-th">d</th>
+                                    <th class="data-table-th">x1</th>
+                                    <th class="data-table-th">y1</th>
+                                    <th class="data-table-th">z1</th>
+                                    <th class="data-table-th">x2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-table-tr"><td class="data-table-td">30/11/2024</td><td class="data-table-td">0.81</td><td class="data-table-td">0.76</td><td class="data-table-td">0.9</td><td class="data-table-td">0.11</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/10/2024</td><td class="data-table-td">0.82</td><td class="data-table-td">0.12</td><td class="data-table-td">0.2</td><td class="data-table-td">0.47</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/09/2024</td><td class="data-table-td">0.18</td><td class="data-table-td">0.36</td><td class="data-table-td">0.04</td><td class="data-table-td">0.82</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/08/2024</td><td class="data-table-td">0.3</td><td class="data-table-td">0.27</td><td class="data-table-td">0.62</td><td class="data-table-td">0.32</td ></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/07/2024</td><td class="data-table-td">0.74</td><td class="data-table-td">0.85</td><td class="data-table-td">0.72</td><td class="data-table-td">0.25</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/06/2024</td><td class="data-table-td">0.72</td><td class="data-table-td">0.19</td><td class="data-table-td">0.91</td><td class="data-table-td">0.69</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/05/2024</td><td class="data-table-td">0.95</td><td class="data-table-td">0.83</td><td class="data-table-td">0.11</td><td class="data-table-td">0.71</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/04/2024</td><td class="data-table-td">0.09</td><td class="data-table-td">0.67</td><td class="data-table-td">0.21</td><td class="data-table-td">0.95</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/03/2024</td><td class="data-table-td">0.8</td><td class="data-table-td">0.67</td><td class="data-table-td">0.54</td><td class="data-table-td">0.97</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">29/02/2024</td><td class="data-table-td">0.54</td><td class="data-table-td">0.38</td><td class="data-table-td">0.29</td><td class="data-table-td">0.62</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/01/2024</td><td class="data-table-td">0.25</td><td class="data-table-td">0.61</td><td class="data-table-td">0.49</td><td class="data-table-td">0.4</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/12/2023</td><td class="data-table-td">0.19</td><td class="data-table-td">0.21</td><td class="data-table-td">0.6</td><td class="data-table-td">0.12</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/11/2023</td><td class="data-table-td">0.29</td><td class="data-table-td">0.66</td><td class="data-table-td">0.15</td><td class="data-table-td">0.85</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/10/2023</td><td class="data-table-td">0.97</td><td class="data-table-td">0.48</td><td class="data-table-td">0.97</td><td class="data-table-td">0.39</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/09/2023</td><td class="data-table-td">0.37</td><td class="data-table-td">0.3</td><td class="data-table-td">0.48</td><td class="data-table-td">0.56</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/08/2023</td><td class="data-table-td">0.75</td><td class="data-table-td">0.66</td><td class="data-table-td">0.59</td><td class="data-table-td">0.44</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/07/2023</td><td class="data-table-td">0.91</td><td class="data-table-td" >0.27</td><td class="data-table-td">0.85</td><td class="data-table-td">0.94</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/06/2023</td><td class="data-table-td">0.64</td><td class="data-table-td">0.72</td><td class="data-table-td">0.03</td><td class="data-table-td">0.71</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/05/2023</td><td class="data-table-td">0.69</td><td class="data-table-td">0.2</td><td class="data-table-td">0.81</td><td class="data-table-td">0.51</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">30/04/2023</td><td class="data-table-td">0.9</td><td class="data-table-td">0.01</td><td class="data-table-td">0.97</td><td class="data-table-td">0.32</td></tr>
+                                <tr class="data-table-tr"><td class="data-table-td">31/03/2023</td><td class="data-table-td">0.03</td><td class="data-table-td">0.89</td><td class="data-table-td">0.62</td><td class="data-table-td">0.95</td></tr>
+                            </tbody>
+                          </table>
+                              <footer>
+                                {{footer_text}}
+                                <p class="page-number">Page 1</p>
+                              </footer>
+    </div>
+</body>
+</html>
