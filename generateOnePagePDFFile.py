@@ -1,5 +1,7 @@
-pip install --upgrade plotly
-pip install --upgrade numpy
+import subprocess
+# Install or upgrade plotly
+subprocess.run(["pip", "install", "--upgrade", "plotly"])
+subprocess.run(["pip", "install", "--upgrade", "numpy"])
 
 import streamlit as st
 import pandas as pd
